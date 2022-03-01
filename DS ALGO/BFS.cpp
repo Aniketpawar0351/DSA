@@ -3,7 +3,7 @@
 #include<queue>
 using namespace std;
 
-typedef pair<int,int> p;
+
 
 queue<int> q;
 void bfs(int src)
@@ -18,7 +18,7 @@ int main()
     cout<<"enter edges: ";
     cin>>e;
 
-    vector<vector<int>>v1[10000];
+    vector< vector<int> >v1[10000];
     int temp1,temp2;
     for(int i=0;i<e;i++)
     {
