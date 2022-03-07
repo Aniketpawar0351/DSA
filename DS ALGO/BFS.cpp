@@ -6,10 +6,29 @@ using namespace std;
 
 
 queue<int> q;
+vector<int>v1[10000];
+bool visited[10000];
 void bfs(int src)
 {
+    q.push(src);
+    visited[src]=true;
+    while(!q.empty())
+    {
+        int vertex=q.front();
+        q.pop();
+        cout<<vertex<<"->";
+        for(int i=0;i<v1[vertex].size();i++)
+        {
+            if(!(visited[v1[vertex][i]]))
+            {
+                q.push(v1[vertex][i]);
+                visited[v1[vertex][i]]=true;
+            }
+        }
+    }
 
 }
+
 int main()
 {
     int v,e;
@@ -18,7 +37,7 @@ int main()
     cout<<"enter edges: ";
     cin>>e;
 
-    vector< vector<int> >v1[10000];
+
     int temp1,temp2;
     for(int i=0;i<e;i++)
     {
