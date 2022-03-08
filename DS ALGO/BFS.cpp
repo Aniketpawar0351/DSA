@@ -32,7 +32,7 @@ void bfs(int src)
 int main()
 {
     int v,e;
-    cout<<"enter vertices number: ";
+    cout<<"enter vertice number: ";
     cin>>v;
     cout<<"enter edges: ";
     cin>>e;
